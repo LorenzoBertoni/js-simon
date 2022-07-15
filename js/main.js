@@ -1,15 +1,21 @@
-const wrapperDom = document.getElementById('wrapper');
+let wrapperDom = document.getElementById('wrapper');
 let usedNumbers = [];
-let numbers;
+let numbers = 0;
+let div;
 
 for (let i = 0; i < 5; i++) {
     numbers = uniqueRandomNumber (usedNumbers, 1, 100);
     usedNumbers.push(numbers);
     console.log(numbers);
-    let div = document.createElement('div');
+    div = document.createElement('div');
     div.append(numbers);
     wrapperDom.append(div);
 }
+
+setTimeout(function () {
+    hide(wrapperDom);
+}, 3000); //! cambiare il tempo di debug
+
 
 
 function randomNumber(min, max) {
@@ -29,4 +35,9 @@ function uniqueRandomNumber(usedNumberList, min, max) {
     }
 
     return createdNumber;
+}
+
+function hide (element) {
+    element.classList.add('d-none');
+    return element;
 }
