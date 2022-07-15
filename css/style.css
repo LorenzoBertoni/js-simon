@@ -3,3 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+body {
+    background-color: aquamarine;
+    font-family: sans-serif;
+}
+
+#title {
+    text-align: center;
+    margin-top: 10%;
+}
+
+#wrapper {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 40px;
+    font-family: 'DotGothic16', sans-serif;
+    margin-top: 5rem;
+}
