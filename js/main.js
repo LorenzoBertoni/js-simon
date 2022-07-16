@@ -1,6 +1,6 @@
 let wrapperDom = document.getElementById('wrapper');
-let usedNumbers = [];
 let numbers = 0;
+let usedNumbers = [];
 let div;
 let score = 0;
 
@@ -17,20 +17,10 @@ setTimeout(function () {
 }, 30000);
 
 setTimeout(function(){
-    let userPrompt = parseInt(prompt('inserisci numeri'));
-        check(usedNumbers, userPrompt);
-
-    let userPrompt2 = parseInt(prompt('inserisci numeri'));
-        check(usedNumbers, userPrompt2);
-
-    let userPrompt3 = parseInt(prompt('inserisci numeri'));
-        check(usedNumbers, userPrompt3);
-
-    let userPrompt4 = parseInt(prompt('inserisci numeri'));
-        check(usedNumbers, userPrompt4);
-
-    let userPrompt5 = parseInt(prompt('inserisci numeri'));
-        check(usedNumbers, userPrompt5);
+    for (let c = 0; c < 5; c++) {
+        let userPrompt = parseInt(prompt('Inserisci Numeri'));
+            check(usedNumbers, userPrompt);
+    }
 
     if (score <= 3) {
         document.getElementById('title').innerHTML = `Hai indovinato ${score} numero/i su 5`; 
@@ -41,11 +31,7 @@ setTimeout(function(){
 
 
 
-
-
-
-
-
+//Funzioni;
 function randomNumber(min, max) {
      return Math.floor(Math.random() * (max - min + 1)) + min;
 }
